@@ -96,7 +96,8 @@ especially on heavily loaded servers.
 
 The **solution** would be to have signals delivered with the same 
 priority as file descriptor events. However, with the current 
-overloading of return values, this is not possible.
+overloading of return values (fd count vs. -1/`EINTR` for signals),
+this is not possible.
 
 ## Introducing `pselect7()`
 
